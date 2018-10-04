@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require 'soccer_score'
+require 'pry'
+
+input = ''
+
+ARGF.each_line do |line|
+  input += line
+end
+
+puts SoccerScore.rank(input)
