@@ -5,8 +5,8 @@ RSpec.describe SoccerScore do
 
   context '' do
     let(:root_dir) { File.expand_path("../..", __FILE__) }
-    let(:input) { File.read("#{root_dir}/spec/fixtures/sample-input.txt") }
-    let(:output) { File.read("#{root_dir}/spec/fixtures/expected-output.txt") }
+    let(:input) { File.read("#{root_dir}/spec/fixtures/sample-input.txt").strip }
+    let(:output) { File.read("#{root_dir}/spec/fixtures/expected-output.txt").strip }
 
     it 'provides score table' do
       expect(SoccerScore.rank(input)).to eq(output)

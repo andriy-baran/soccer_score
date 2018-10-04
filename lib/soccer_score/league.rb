@@ -5,7 +5,7 @@ module SoccerScore
       @leader_board  = LeaderBoard.new
     end
 
-    def ranking_table
+    def ranked_records
       count_teams_points
       @leader_board.ranked_records
     end

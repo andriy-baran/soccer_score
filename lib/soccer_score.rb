@@ -11,7 +11,7 @@ module SoccerScore
   def self.rank(games_log)
     game_results = GamesLogParser.new(games_log).call
     league = League.new(game_results)
-    records = league.ranking_table
+    records = league.ranked_records
     BoardPresenter.new(records).call
   end
 end

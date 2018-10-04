@@ -6,14 +6,7 @@ module SoccerScore
     end
 
     def call
-      idx = 1
-      @board_records.group_by(&:points).each do |(_, records)|
-        records.each do |record|
-          @formated_records << "#{idx}. #{record}"
-        end
-        idx += records.count
-      end
-      "#{@formated_records.join("\n")}\n"
+      @board_records.map(&:to_s).join("\n")
     end
   end
 end
