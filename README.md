@@ -1,8 +1,21 @@
 # SoccerScore
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/soccer_score`. To experiment with that code, run `bin/console` for an interactive prompt.
+The Problem
+===========
+We want you to create a command-line application that calculates the
+ranking table for a soccer league.
 
-TODO: Delete this and the text above, and describe your gem
+Input/output
+------------
+The input `spec/fixtures/sample-input.txt`
+The output ordered from most to least points, `spec/fixtures/expected-output.txt`.
+
+The rules
+---------
+In this league, a draw (tie) is worth 1 point and a win is worth 3 points. A
+loss is worth 0 points. If two or more teams have the same number of points,
+they should have the same rank and be printed in alphabetical order (as in the
+tie for 3rd place in the sample data).
 
 ## Installation
 
@@ -22,7 +35,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+$ cat input.txt | soccer_score
+$ soccer_score input.txt
+$ soccer_score input.txt > output.txt
+```
 
 ## Development
 
